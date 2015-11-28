@@ -1,0 +1,36 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+stty -ixon -ixoff
+
+export EDITOR='vim'
+alias ls='ls --color=tty'
+alias ll='ls -l --color=tty'
+alias R='R -q '
+alias gdb='gdb -q '
+alias tmux="TERM=screen-256color-bce tmux"
+
+alias irc='ssh home -t tmux a -t irssi'
+
+alias fortune='fortune ~/.fortunes'
+alias funfacts="elinks -dump randomfunfacts.com | egrep '(^│.*│$)|(^[┌└])'"
+alias f='fortune'
+alias ff='funfacts'
+
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+
+PS1='[\u@\h \W]\$ '
+PATH=$PATH:/home/al/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+unset HISTFILE
+
+#solarized
+eval `dircolors ~/.dir_colors`
+
+# this fixes new line bug
+shopt -s checkwinsize
+
+fortune

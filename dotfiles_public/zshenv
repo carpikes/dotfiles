@@ -1,0 +1,5 @@
+typeset -U path
+#path=(~/bin /opt/android-ndk /opt/android-sdk/platform-tools /opt/android-sdk/tools $(ruby -rubygems -e "puts Gem.user_dir")/bin /usr/local/bin $path)
+
+setopt NO_CHECK_JOBS
+setopt NO_HUP

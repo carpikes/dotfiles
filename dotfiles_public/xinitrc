@@ -1,0 +1,47 @@
+#!/bin/sh
+
+#####################
+# Start GNOME Keyring
+#####################
+SSH_AUTH_SOCK=0
+eval `dbus-launch --sh-syntax --exit-with-session`
+eval $(/usr/bin/gnome-keyring-daemon)
+export GPG_AGENT_INFO
+export SSH_AUTH_SOCK
+
+#####################
+# Background daemons
+#####################
+start-pulseaudio-x11
+xset s off b off r rate 300 30 
+
+#####################
+# Delay startup
+#####################
+(sleep 1 && 
+    compton& 
+    nm-applet& 
+    ~/bin/lowram.sh&
+    ~/bin/batestim.sh&
+    synclient MaxSpeed=2.5 AccelFactor=0.3
+)&
+
+#####################
+# POuL widget updater
+#####################
+~/bin/poul_wm >/dev/null 2>&1 & 
+
+#####################
+# Last things
+#####################
+xrdb ~/.Xresources
+setxkbmap us altgr-intl
+xsetroot -cursor_name left_ptr
+xautolock -time 5 -locker /home/al/bin/lock -nowlocker /home/al/bin/lock&
+
+nitrogen --restore
+
+#####################
+# Start the Window Manager
+#####################
+exec awesome

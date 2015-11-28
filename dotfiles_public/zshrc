@@ -1,0 +1,70 @@
+####################
+# OH-MY-ZSH
+####################
+export ZSH=$HOME/git/other/oh-my-zsh
+ZSH_THEME="al"
+plugins=(git thefuck)
+source $ZSH/oh-my-zsh.sh
+
+####################
+# User configuration
+####################
+export PATH="/home/al/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
+
+setopt interactivecomments
+
+####################
+# Remove history
+####################
+
+unset HISTFILE
+HISTSIZE=1000
+SAVEHIST=0
+
+####################
+# Map correct keys
+####################
+bindkey     "^[[3~"      delete-char
+bindkey     "^[3;5~"     delete-char
+bindkey     "\e[7~"      beginning-of-line
+bindkey     "\e[8~"      end-of-line
+
+####################
+# Default editor <3
+####################
+export EDITOR='vim'
+
+####################
+# Aliases
+####################
+alias ls='ls --color=tty'
+alias ll='ls -l --color=tty'
+alias R='R -q '
+alias gdb='gdb -q '
+alias tmux="TERM=screen-256color-bce tmux"
+alias irc='ssh home -t tmux a -t weechat'
+
+alias fortune='fortune ~/.fortunes'
+alias funfacts="elinks -dump randomfunfacts.com | egrep '(^│.*│$)|(^[┌└])'"
+alias chromium='chromium --high-dpi-support=1 --force-device-scale-factor=1 '
+alias f='fortune'
+alias ff='funfacts'
+
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+alias fuckgit='git add . && git commit -m "$(curl -s whatthecommit.com/index.txt)"'
+
+#####################
+## Dir colors
+#####################
+##
+##eval `dircolors ~/.dir_colors.zenburn`
+##
+##zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+#####################
+## Fortune only in my user 
+#####################
+##
+##if [ "$(id -u)"  != "0" ]; then
+##    fortune | cowsay
+##fi;

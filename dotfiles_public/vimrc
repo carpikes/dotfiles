@@ -1,0 +1,79 @@
+execute pathogen#infect()
+
+" VUNDLE "
+filetype off
+call vundle#rc()
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'szw/vim-ctrlspace'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
+
+filetype plugin indent on
+" END VUNDLE "
+
+set autoindent smartindent copyindent
+set background=dark
+set colorcolumn=80
+set cursorline
+set encoding=utf8
+set expandtab smarttab
+set fileencodings=utf-8,latin1
+set grepprg=grep\ -nH\ $*
+set hidden      " required by vim-ctrlspace 
+set hlsearch 	" hilight searched words
+set ignorecase
+set incsearch	" makes search act like search in modern browsers
+set lazyredraw  " execute macros faster
+set magic 		" regex
+set nocompatible
+set number
+set shiftround " When at 3 spaces, and hit > ... go to 4, not 7
+set smartcase	
+set tabstop=4 shiftwidth=4
+
+colorscheme zenburn
+runtime macros/matchit.vim
+syntax on
+
+let g:NERDTreeDirArrows=0
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:tex_flavor = "latex"
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_confirm_extra_conf = 0
+let g:CtrlSpaceFileEngine = "file_engine_linux_amd64"
+let g:CtrlSpaceUseUnicode = 0
+let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+
+map! <C-v>fa ∀
+map! <C-v>el ∈
+map! <C-v>ex ∃
+map! <C-v>!= ≠
+map! <C-v>-> →
+map! <C-v>&  ∧
+map! <C-v>no ⌐
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>
+
+map <F2> :NERDTreeToggle<CR>
+map <F9> :TagbarToggle<CR>
+nmap gt :tabnext<CR>
+nmap gT :tabprevious<CR>
+
+if has("gui_running")
+    set guifont=Menlo\ 10
+else
+    set t_Co=16
+    set t_ut=
+endif

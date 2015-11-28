@@ -1,0 +1,10 @@
+" some commands
+map ,m :set<Space>toolbars=none,tabs,addons<Return>
+map ,n :set<Space>toolbars=all,nomenu,nobookmarks<Return>
+map ,b :set<Space>toolbars=all,nomenu<Return>
+
+" disable autocompletion
+set autocomplete=
+set complete=
+
+source .vimperatorrc_private

@@ -7,4 +7,4 @@ map ,b :set<Space>toolbars=all,nomenu<Return>
 set autocomplete=
 set complete=
 
-source .vimperatorrc_private
+source ~/.vimperatorrc_private

@@ -1,0 +1,23 @@
+set scrollstep              100
+set recolor-keephue         "true"
+
+# ZENBURN 
+
+set default-bg              "#1F1F1F"
+set default-fg              "#FFFFFF"
+
+set recolor-darkcolor       "#FFFFFF"
+set recolor-lightcolor      "#3F3F3F"
+
+set statusbar-fg            "#FFFFFF"
+set statusbar-bg            "#3F3F3F"
+
+set inputbar-fg             "#FFFFFF"
+set inputbar-bg             "#3F3F3F"
+
+set completion-highlight-fg "#F0DFAF"
+set completion-highlight-bg "#3F3F3F"
+
+set notification-fg         "#FFFFFF"
+set notification-bg         "#3F3F3F"
+

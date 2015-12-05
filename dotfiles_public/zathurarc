@@ -7,7 +7,7 @@ set default-bg              "#1F1F1F"
 set default-fg              "#FFFFFF"
 
 set recolor-darkcolor       "#FFFFFF"
-set recolor-lightcolor      "#3F3F3F"
+set recolor-lightcolor      "#1F1F1F"
 
 set statusbar-fg            "#FFFFFF"
 set statusbar-bg            "#3F3F3F"

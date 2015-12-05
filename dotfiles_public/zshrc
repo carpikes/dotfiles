@@ -3,7 +3,7 @@
 ####################
 export ZSH=$HOME/git/other/oh-my-zsh
 ZSH_THEME="al"
-plugins=(git thefuck)
+plugins=(git thefuck autojump)
 source $ZSH/oh-my-zsh.sh
 
 ####################
@@ -68,3 +68,14 @@ alias fuckgit='git add . && git commit -m "$(curl -s whatthecommit.com/index.txt
 ##if [ "$(id -u)"  != "0" ]; then
 ##    fortune | cowsay
 ##fi;
+
+#####################
+## TODO file
+#####################
+
+if [ -f ~/TODO ]; then
+    echo "===== TODO LIST ====="
+    cat ~/TODO;
+    echo "====================="
+
+fi;

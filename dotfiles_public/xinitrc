@@ -23,6 +23,8 @@ xset s off b off r rate 300 30
     nm-applet& 
     ~/bin/lowram.sh&
     ~/bin/batestim.sh&
+    urxvtd&
+    unclutter -root&
     synclient MaxSpeed=2.5 AccelFactor=0.3
 )&
 

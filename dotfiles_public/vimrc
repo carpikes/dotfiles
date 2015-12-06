@@ -2,14 +2,27 @@ execute pathogen#infect()
 
 " VUNDLE "
 filetype off
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'szw/vim-ctrlspace'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'gerw/vim-latex-suite'
+Plugin 'honza/vim-snippets'
+Plugin 'majutsushi/tagbar'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'scrooloose/nerdtree'
+Plugin 'szw/vim-ctrlspace'
+Plugin 'tmhedberg/matchit'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 
+" phpcomplete-extended
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle 'm2mdas/phpcomplete-extended'
+
+call vundle#end()
 filetype plugin indent on
 " END VUNDLE "
 

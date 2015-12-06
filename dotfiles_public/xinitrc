@@ -25,6 +25,7 @@ xset s off b off r rate 300 30
     ~/bin/batestim.sh&
     urxvtd&
     unclutter -root&
+    redshift-gtk&
     synclient MaxSpeed=2.5 AccelFactor=0.3
 )&
 

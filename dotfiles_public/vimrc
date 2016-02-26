@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 " VUNDLE "
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -16,6 +14,7 @@ Plugin 'szw/vim-ctrlspace'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/Gundo'
 
 " phpcomplete-extended
 Bundle 'Shougo/vimproc'
@@ -46,7 +45,6 @@ set shiftround " When at 3 spaces, and hit > ... go to 4, not 7
 set smartcase	
 set tabstop=4 shiftwidth=4
 
-colorscheme zenburn
 runtime macros/matchit.vim
 syntax on
 
@@ -85,8 +83,12 @@ nmap gt :tabnext<CR>
 nmap gT :tabprevious<CR>
 
 if has("gui_running")
-    set guifont=Menlo\ 10
+    set guifont=Input\ Mono\ 10
+    set guioptions=-m
+    colorscheme buttercream
 else
+    colorscheme zenburn
     set t_Co=16
     set t_ut=
 endif
+set mouse-=a

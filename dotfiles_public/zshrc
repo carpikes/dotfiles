@@ -9,7 +9,8 @@ source $ZSH/oh-my-zsh.sh
 ####################
 # User configuration
 ####################
-export PATH="/home/al/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:$(ruby -rubygems -e "puts Gem.user_dir")/bin"
+#export PATH="/home/al/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl"
+export PATH="/home/al/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/opt/texlive/2015/bin/x86_64-linux"
 
 setopt interactivecomments
 
@@ -42,7 +43,6 @@ alias ll='ls -l --color=tty'
 alias R='R -q '
 alias gdb='gdb -q '
 alias tmux="TERM=screen-256color-bce tmux"
-alias irc='ssh home -t tmux a -t weechat'
 
 alias fortune='fortune ~/.fortunes'
 alias funfacts="elinks -dump randomfunfacts.com | egrep '(^│.*│$)|(^[┌└])'"
@@ -50,7 +50,6 @@ alias chromium='chromium --high-dpi-support=1 --force-device-scale-factor=1 '
 alias f='fortune'
 alias ff='funfacts'
 
-alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 alias fuckgit='git add . && git commit -m "$(curl -s whatthecommit.com/index.txt)"'
 
 #####################
@@ -79,3 +78,6 @@ if [ -f ~/TODO ]; then
     echo "====================="
 
 fi;
+
+export XDG_VTNR=01
+[[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]] && exec startx

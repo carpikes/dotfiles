@@ -1,5 +1,4 @@
-set scrollstep              100
-set recolor-keephue         "true"
+set scroll-step              100
 
 # ZENBURN 
 
@@ -20,4 +19,3 @@ set completion-highlight-bg "#3F3F3F"
 
 set notification-fg         "#FFFFFF"
 set notification-bg         "#3F3F3F"
-

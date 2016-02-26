@@ -2,10 +2,12 @@
 !Xft
 !--------------!
 Xft.dpi:                    102
-Xft.antialias:              true
+Xft.antialias:              1
+Xft.autohint:               0
 Xft.rgba:                   rgb
 Xft.hinting:                true
-Xft.hintstyle:              hintslight
+Xft.hintstyle:              hintfull
+Xft.lcdfilter:              lcddefault
 
 !--------------!
 !Xcursor
@@ -16,14 +18,14 @@ Xcursor.size:               24
 !--------------!
 !Xterm
 !--------------!
-xterm*faceName:             Terminus:pixelsize=14:antialias=false:hinting=false
+xterm*faceName:             Terminus:pixelsize=17:antialias=false:hinting=false
 
 !--------------!
 !URxvt
 !--------------!
-URxvt.font:         xft:Terminus:pixelsize=14:antialias=false:hinting=false\
-                            ,xft:Noto Emoji:pixelsize=12:antialias=false\
-                            ,xft:Symbola:pixelsize=12:antialias=false
+URxvt.font:                 xft:Terminus:pixelsize=17
+!                            ,xft:Noto Emoji:pixelsize=12:antialias=false \
+!                            ,xft:Symbola:pixelsize=12:antialias=false
 
 URxvt.termName:             rxvt-256color
 URxvt.scrollBar:            false

@@ -24,13 +24,13 @@ alias ff='funfacts'
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
 
 PS1='[\u@\h \W]\$ '
-PATH=$PATH:/home/al/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:$(ruby -rubygems -e "puts Gem.user_dir")/bin
+PATH=$PATH:/home/al/bin:/opt/android-ndk:/opt/android-sdk/platform-tools
 unset HISTFILE
 
 #solarized
-eval `dircolors ~/.dir_colors`
+#eval `dircolors ~/.dir_colors`
 
 # this fixes new line bug
 shopt -s checkwinsize
 
-fortune
+#fortune

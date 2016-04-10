@@ -6,8 +6,8 @@ Xft.antialias:              1
 Xft.autohint:               0
 Xft.rgba:                   rgb
 Xft.hinting:                true
-Xft.hintstyle:              hintfull
-Xft.lcdfilter:              lcddefault
+Xft.hintstyle:              hintslight
+!Xft.lcdfilter:              lcddefault
 
 !--------------!
 !Xcursor

@@ -7,6 +7,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'gerw/vim-latex-suite'
 Plugin 'honza/vim-snippets'
+Plugin 'jeaye/color_coded'
 Plugin 'majutsushi/tagbar'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
@@ -15,6 +16,8 @@ Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/Gundo'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'flazz/vim-colorschemes'
 
 " phpcomplete-extended
 Bundle 'Shougo/vimproc'
@@ -83,12 +86,11 @@ nmap gt :tabnext<CR>
 nmap gT :tabprevious<CR>
 
 if has("gui_running")
-    set guifont=Input\ Mono\ 10
+    set guifont=DejaVu\ Sans\ Mono\ 10
     set guioptions=-m
-    colorscheme buttercream
+    colorscheme wombat
 else
     colorscheme zenburn
     set t_Co=16
     set t_ut=
 endif
-set mouse-=a

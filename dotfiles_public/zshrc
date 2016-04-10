@@ -1,16 +1,24 @@
 ####################
+# Autojump
+####################
+[[ -s /home/al/.autojump/etc/profile.d/autojump.sh ]] && source /home/al/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+
+####################
 # OH-MY-ZSH
 ####################
 export ZSH=$HOME/git/other/oh-my-zsh
 ZSH_THEME="al"
-plugins=(git thefuck autojump)
+plugins=(git thefuck)
 source $ZSH/oh-my-zsh.sh
 
 ####################
 # User configuration
 ####################
 #export PATH="/home/al/bin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl"
-export PATH="/home/al/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/opt/texlive/2015/bin/x86_64-linux"
+export PATH="/home/al/bin:/home/al/.autojump/bin"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/texlive/2015/bin/x86_64-linux"
+export PATH="$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools"
 
 setopt interactivecomments
 

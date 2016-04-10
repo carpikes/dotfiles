@@ -29,6 +29,7 @@ nitrogen --restore
     urxvtd&
     unclutter -root&
     redshift-gtk&
+    zeal&
     synclient MaxSpeed=2.5 AccelFactor=0.3
 )&
 

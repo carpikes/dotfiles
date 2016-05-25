@@ -24,8 +24,6 @@ xterm*faceName:             Terminus:pixelsize=17:antialias=false:hinting=false
 !URxvt
 !--------------!
 URxvt.font:                 xft:Terminus:pixelsize=17
-!                            ,xft:Noto Emoji:pixelsize=12:antialias=false \
-!                            ,xft:Symbola:pixelsize=12:antialias=false
 
 URxvt.termName:             rxvt-256color
 URxvt.scrollBar:            false
@@ -39,11 +37,11 @@ URxvt.perl-lib:             /usr/lib/urxvt/perl/
 URxvt.perl-ext-common:      default,matcher,matcher2
 
 ! Left click: firefox
-URxvt.matcher.launcher:     /usr/bin/firefox
+URxvt.matcher.launcher:     /home/al/bin/firefox
 URxvt.matcher.button:       1
 
 ! Right click: chromium --ingognito
-URxvt.matcher2.launcher:    /usr/local/bin/incognito
+URxvt.matcher2.launcher:    /home/al/bin/incognito
 URxvt.matcher2.button:      3
 
 ! Catch ugly URLs

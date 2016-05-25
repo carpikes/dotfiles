@@ -3,7 +3,6 @@
 #####################
 # Start GNOME Keyring
 #####################
-. /etc/X11/xinit/xinitrc.d/90-consolekit
 SSH_AUTH_SOCK=0
 #eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 eval `dbus-launch --sh-syntax --exit-with-session`
@@ -29,7 +28,6 @@ nitrogen --restore
     urxvtd&
     unclutter -root&
     redshift-gtk&
-    zeal&
     synclient MaxSpeed=2.5 AccelFactor=0.3
 )&
 
@@ -49,4 +47,4 @@ xautolock -time 5 -locker /home/al/bin/lock -nowlocker /home/al/bin/lock&
 #####################
 # Start the Window Manager
 #####################
-exec ck-launch-session awesome
+exec awesome

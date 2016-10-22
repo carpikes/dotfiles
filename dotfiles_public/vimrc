@@ -16,8 +16,8 @@ Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/Gundo'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tikhomirov/vim-glsl'
 
 " phpcomplete-extended
 " Bundle 'Shougo/vimproc'
@@ -51,6 +51,9 @@ set tabstop=4 shiftwidth=4
 runtime macros/matchit.vim
 syntax on
 
+autocmd BufNewFile,BufRead *.fs set filetype=glsl
+autocmd BufNewFile,BufRead *.vs set filetype=glsl
+
 let g:NERDTreeDirArrows=0
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -82,15 +85,18 @@ map gd :bd<cr>
 
 map <F2> :NERDTreeToggle<CR>
 map <F9> :TagbarToggle<CR>
+nnoremap <F11> :make<CR>
+nnoremap <S-F11> :make again<CR>
+nnoremap <F12> :make run<CR>
 nmap gt :tabnext<CR>
 nmap gT :tabprevious<CR>
 
 if has("gui_running")
-    set guifont=DejaVu\ Sans\ Mono\ 10
+    set guifont=DejaVu\ Sans\ Mono\ 12
     set guioptions=-m
     colorscheme wombat
 else
-    colorscheme zenburn
-    set t_Co=16
-    set t_ut=
+    colorscheme wombat
+"   set t_Co=16
+"   set t_ut=
 endif

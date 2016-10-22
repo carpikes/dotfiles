@@ -3,12 +3,12 @@
 #####################
 # Start GNOME Keyring
 #####################
-SSH_AUTH_SOCK=0
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-eval `dbus-launch --sh-syntax --exit-with-session`
+#eval `dbus-launch --sh-syntax --exit-with-session`
 eval $(/usr/bin/gnome-keyring-daemon)
-export GPG_AGENT_INFO
+dbus-update-activation-environment --systemd DISPLAY
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
+export GPG_AGENT_INFO
 
 #####################
 # Background daemons
@@ -25,6 +25,8 @@ nitrogen --restore
     nm-applet& 
     ~/bin/lowram.sh&
     ~/bin/batestim.sh&
+#    ~/bin/pokemon.sh&
+    ~/bin/kl.sh&
     urxvtd&
     unclutter -root&
     redshift-gtk&
@@ -34,7 +36,7 @@ nitrogen --restore
 #####################
 # POuL widget updater
 #####################
-#~/bin/poul_wm >/dev/null 2>&1 & 
+~/bin/poul_wm >/dev/null 2>&1 & 
 
 #####################
 # Last things

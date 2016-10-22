@@ -18,12 +18,12 @@ Xcursor.size:               24
 !--------------!
 !Xterm
 !--------------!
-xterm*faceName:             Terminus:pixelsize=17:antialias=false:hinting=false
+xterm*faceName:             Terminus:pixelsize=17:antialias=true:hinting=true
 
 !--------------!
 !URxvt
 !--------------!
-URxvt.font:                 xft:Terminus:pixelsize=17
+URxvt.font:                 xft:Terminus:pixelsize=18
 
 URxvt.termName:             rxvt-256color
 URxvt.scrollBar:            false

@@ -21,7 +21,7 @@ nitrogen --restore
 # Delay startup
 #####################
 (sleep 0.5 && 
-    compton& 
+    compton --xrender-sync-fence& 
     nm-applet& 
     ~/bin/lowram.sh&
     ~/bin/batestim.sh&
@@ -36,7 +36,7 @@ nitrogen --restore
 #####################
 # POuL widget updater
 #####################
-~/bin/poul_wm >/dev/null 2>&1 & 
+#~/bin/poul_wm >/dev/null 2>&1 & 
 
 #####################
 # Last things
@@ -45,6 +45,9 @@ xrdb ~/.Xresources
 setxkbmap us altgr-intl
 xsetroot -cursor_name left_ptr
 xautolock -time 5 -locker /home/al/bin/lock -nowlocker /home/al/bin/lock&
+chmod o+x /run/user/1000/pulse
+chmod o+x /run/user/1000
+export ANDROID_HOME=/opt/android-sdk-linux
 
 #####################
 # Start the Window Manager

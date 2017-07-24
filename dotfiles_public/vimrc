@@ -3,6 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'maksimr/vim-jsbeautify'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'gerw/vim-latex-suite'
@@ -18,6 +19,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/Gundo'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tikhomirov/vim-glsl'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'tpope/vim-dispatch' " used by omnisharp
+Plugin 'tpope/vim-markdown'
 
 " phpcomplete-extended
 " Bundle 'Shougo/vimproc'
@@ -51,6 +55,7 @@ set tabstop=4 shiftwidth=4
 runtime macros/matchit.vim
 syntax on
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.fs set filetype=glsl
 autocmd BufNewFile,BufRead *.vs set filetype=glsl
 
@@ -94,9 +99,9 @@ nmap gT :tabprevious<CR>
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ 12
     set guioptions=-m
-    colorscheme wombat
+    colorscheme vimbrant
 else
-    colorscheme wombat
+    colorscheme vimbrant
 "   set t_Co=16
 "   set t_ut=
 endif
